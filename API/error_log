@@ -1,0 +1,114 @@
+[23-Oct-2024 21:42:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '40-357' for key 'idProfesor' in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php:111
+Stack trace:
+#0 /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php(111): PDOStatement->execute(Array)
+#1 /home2/uiakkdaq/public_html/API/insertProfesorMateria.php(16): ProfesorDictaMateria->save(Array)
+#2 {main}
+  thrown in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php on line 111
+[23-Oct-2024 21:42:32 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '40-357' for key 'idProfesor' in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php:111
+Stack trace:
+#0 /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php(111): PDOStatement->execute(Array)
+#1 /home2/uiakkdaq/public_html/API/insertProfesorMateria.php(16): ProfesorDictaMateria->save(Array)
+#2 {main}
+  thrown in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php on line 111
+[23-Oct-2024 21:42:40 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '40-357' for key 'idProfesor' in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php:111
+Stack trace:
+#0 /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php(111): PDOStatement->execute(Array)
+#1 /home2/uiakkdaq/public_html/API/insertProfesorMateria.php(16): ProfesorDictaMateria->save(Array)
+#2 {main}
+  thrown in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php on line 111
+[23-Oct-2024 21:44:19 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '40-375' for key 'idProfesor' in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php:111
+Stack trace:
+#0 /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php(111): PDOStatement->execute(Array)
+#1 /home2/uiakkdaq/public_html/API/insertProfesorMateria.php(16): ProfesorDictaMateria->save(Array)
+#2 {main}
+  thrown in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php on line 111
+[23-Oct-2024 21:45:25 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '40-9' for key 'idProfesor' in /home2/uiakkdaq/public_html/app/models/ProfesorPerteneceCarrera.php:78
+Stack trace:
+#0 /home2/uiakkdaq/public_html/app/models/ProfesorPerteneceCarrera.php(78): PDOStatement->execute(Array)
+#1 /home2/uiakkdaq/public_html/API/insertProfesorCarrera.php(19): ProfesorPerteneceCarrera->save(Array)
+#2 {main}
+  thrown in /home2/uiakkdaq/public_html/app/models/ProfesorPerteneceCarrera.php on line 78
+[23-Oct-2024 21:45:50 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '40-318' for key 'idProfesor' in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php:111
+Stack trace:
+#0 /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php(111): PDOStatement->execute(Array)
+#1 /home2/uiakkdaq/public_html/API/insertProfesorMateria.php(16): ProfesorDictaMateria->save(Array)
+#2 {main}
+  thrown in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php on line 111
+[23-Oct-2024 21:46:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '40-318' for key 'idProfesor' in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php:111
+Stack trace:
+#0 /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php(111): PDOStatement->execute(Array)
+#1 /home2/uiakkdaq/public_html/API/insertProfesorMateria.php(16): ProfesorDictaMateria->save(Array)
+#2 {main}
+  thrown in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php on line 111
+[23-Oct-2024 21:46:16 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '40-318' for key 'idProfesor' in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php:111
+Stack trace:
+#0 /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php(111): PDOStatement->execute(Array)
+#1 /home2/uiakkdaq/public_html/API/insertProfesorMateria.php(16): ProfesorDictaMateria->save(Array)
+#2 {main}
+  thrown in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php on line 111
+[23-Oct-2024 21:46:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '125-318' for key 'idProfesor' in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php:111
+Stack trace:
+#0 /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php(111): PDOStatement->execute(Array)
+#1 /home2/uiakkdaq/public_html/API/insertProfesorMateria.php(16): ProfesorDictaMateria->save(Array)
+#2 {main}
+  thrown in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php on line 111
+[23-Oct-2024 21:47:10 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '125-318' for key 'idProfesor' in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php:111
+Stack trace:
+#0 /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php(111): PDOStatement->execute(Array)
+#1 /home2/uiakkdaq/public_html/API/insertProfesorMateria.php(16): ProfesorDictaMateria->save(Array)
+#2 {main}
+  thrown in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php on line 111
+[23-Oct-2024 21:48:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '125-375' for key 'idProfesor' in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php:111
+Stack trace:
+#0 /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php(111): PDOStatement->execute(Array)
+#1 /home2/uiakkdaq/public_html/API/insertProfesorMateria.php(16): ProfesorDictaMateria->save(Array)
+#2 {main}
+  thrown in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php on line 111
+[23-Oct-2024 21:49:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '39-318' for key 'idProfesor' in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php:111
+Stack trace:
+#0 /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php(111): PDOStatement->execute(Array)
+#1 /home2/uiakkdaq/public_html/API/insertProfesorMateria.php(16): ProfesorDictaMateria->save(Array)
+#2 {main}
+  thrown in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php on line 111
+[23-Oct-2024 21:50:01 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '39-340' for key 'idProfesor' in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php:111
+Stack trace:
+#0 /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php(111): PDOStatement->execute(Array)
+#1 /home2/uiakkdaq/public_html/API/insertProfesorMateria.php(16): ProfesorDictaMateria->save(Array)
+#2 {main}
+  thrown in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php on line 111
+[23-Oct-2024 21:51:24 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '39-340' for key 'idProfesor' in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php:111
+Stack trace:
+#0 /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php(111): PDOStatement->execute(Array)
+#1 /home2/uiakkdaq/public_html/API/insertProfesorMateria.php(16): ProfesorDictaMateria->save(Array)
+#2 {main}
+  thrown in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php on line 111
+[24-Oct-2024 23:00:05 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '147-379' for key 'idProfesor' in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php:111
+Stack trace:
+#0 /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php(111): PDOStatement->execute(Array)
+#1 /home2/uiakkdaq/public_html/API/insertProfesorMateria.php(16): ProfesorDictaMateria->save(Array)
+#2 {main}
+  thrown in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php on line 111
+[01-Nov-2024 19:16:58 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '43-487' for key 'idProfesor' in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php:111
+Stack trace:
+#0 /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php(111): PDOStatement->execute(Array)
+#1 /home2/uiakkdaq/public_html/API/insertProfesorMateria.php(16): ProfesorDictaMateria->save(Array)
+#2 {main}
+  thrown in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php on line 111
+[01-Nov-2024 19:17:03 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '43-487' for key 'idProfesor' in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php:111
+Stack trace:
+#0 /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php(111): PDOStatement->execute(Array)
+#1 /home2/uiakkdaq/public_html/API/insertProfesorMateria.php(16): ProfesorDictaMateria->save(Array)
+#2 {main}
+  thrown in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php on line 111
+[01-Nov-2024 20:11:33 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '92-427' for key 'idProfesor' in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php:111
+Stack trace:
+#0 /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php(111): PDOStatement->execute(Array)
+#1 /home2/uiakkdaq/public_html/API/insertProfesorMateria.php(16): ProfesorDictaMateria->save(Array)
+#2 {main}
+  thrown in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php on line 111
+[01-Nov-2024 20:12:18 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '92-427' for key 'idProfesor' in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php:111
+Stack trace:
+#0 /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php(111): PDOStatement->execute(Array)
+#1 /home2/uiakkdaq/public_html/API/insertProfesorMateria.php(16): ProfesorDictaMateria->save(Array)
+#2 {main}
+  thrown in /home2/uiakkdaq/public_html/app/models/ProfesorDictaMateria.php on line 111
