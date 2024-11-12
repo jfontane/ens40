@@ -136,7 +136,7 @@
             </div>
           </div>
         </div>
-        <!--<div class="accordion-item">
+        <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
               ¿Que hago si olvido/pierdo mis datos personales de acceso?
@@ -149,7 +149,7 @@
               Si haz seguido todos los pasos anteriores y aún así no puedes acceder al sistema, contacta a <a href="#">Soporte técnico</a>.
             </div>
           </div>
-        </div>-->
+        </div>
       </div>
     </div>
     <input type="hidden" class="form-control" name="inputToken" id="inputToken" value="<?=$_SESSION['token']?>">
@@ -224,7 +224,7 @@
   
  
               <div class="mb-3"> <!--Ingresar correo electrónico -->
-                <label for="inputRestablecerEmail" class="form-label">Ingrese su correo electrónico</label>
+                <label for="inputRestablecerEmail" class="form-label">E-mail</label>
                 <input type="text" id="inputRestablecerEmail" class="form-control" placeholder="Ingrese Email" aria-describedby="passwordHelpBlock">
               </div>
 
@@ -323,9 +323,13 @@ $('#btnRestablecer').click(function(event) {
                console.info(response);
                $("#msg_restablecer").removeClass("d-none");
                if (response.codigo==200) {
-                    $("#msg_restablecer").html('<div class="alert alert-'+response.class+'" role="alert"><b>Error:</b>&nbsp;'+response.mensaje+'.</div>');
+                    $("#msg_restablecer").html('<div class="alert alert-'+response.class+'" role="alert"><img src="./public/img/icons/ok_icon.png" width="20">&nbsp;'+response.mensaje+'</div>');
+                    $('#inputRestablecerPerfil').prop("disabled",true);
+                    $('#inputRestablecerEmail').prop("disabled",true);
+                    $('#inputCaptcha').prop("disabled",true);
+                    $('#btnRestablecer').prop("disabled",true);
                } else {
-                    $("#msg_restablecer").html('<div class="alert alert-'+response.class+'" role="alert"><b>Error:</b>&nbsp;'+response.mensaje+'.</div>');
+                    $("#msg_restablecer").html('<div class="alert alert-'+response.class+'" role="alert"><img src="./public/img/icons/error_icon1.png" width="20">&nbsp;'+response.mensaje+'</div>');
                } 
       },"json");
 });

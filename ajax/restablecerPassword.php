@@ -38,8 +38,7 @@ $arr_resultado = [];
 
 if ($perfil && $email && $codigo) {
     if ($_SESSION['security_code']==strtoupper($codigo)) {
-        
-        
+       
         $persona = new Persona();
         $objusu = new Usuario();
         $arr_datos_persona = $persona->getPersonaByEmail($email); //var_dump($arr_datos_persona);exit;

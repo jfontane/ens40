@@ -246,35 +246,36 @@
           <div class="modal-body"> <!--Cuerpo del modal-->
             <form action=""> <!--Aquí iría el login.php-->
               <div class="mb-3"> <!--Seleccionar perfil (Bedel, profesor, alumno/a)-->
-                <label for="exampleFormControlInput1" class="form-label">Seleccione su perfil</label>
-                <select class="form-select" aria-label="Default select example">
+                <label for="inputPerfil" class="form-label">Seleccione su perfil</label>
+                <select id="inputPerfil" class="form-select" aria-label="Default select example">
                   <option value="1" selected>Alumno</option>
                   <option value="2">Profesor</option>
                   <option value="3">Bedel</option>
                 </select>
               </div>
   
-              <div class="mb-3"> <!--Ingresar usuario -->
-                <label for="exampleFormControlInput1" class="form-label">Ingrese su usuario</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+              <div class="mb-3 d-block"> <!--Ingresar usuario -->
+                <label for="inputUsuario" class="form-label">Ingrese su usuario</label>
+                <input type="text" class="form-control" id="inputUsuario" placeholder="">
               </div>
   
               <div class="mb-3"> <!--Ingresar contraseña -->
-                <label for="exampleFormControlInput1" class="form-label">Ingrese su contraseña</label>
-                <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+                <label for="inputPassword" class="form-label">Ingrese su contraseña</label>
+                <input type="password" id="inputPassword" class="form-control" aria-describedby="passwordHelpBlock">
               </div>
             </form>
           </div>
 
           <div class="modal-footer"> <!--Pie del modal-->
             <div class="row">
-              <div class="col d-grid gap-2 d-md-flex">
-                <a class="" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#modalOlvideContrasenia">¿Olvidaste tu contraseña?</a>
+              <div class="col d-grid gap-2 d-md-flex disabled">
+               <a class="" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#modalOlvideContrasenia">¿Olvidaste tu contraseña?</a>
+               <a class="nav-link" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#modalOlvideContrasenia">Acceder al sistema</a>
               </div>
             </div>
             <div class="col d-grid gap-2 d-md-flex justify-content-md-end">
               <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-primary">Ingresar</button>
+              <button type="button" id="btnIngresar" class="btn btn-primary">Ingresar</button>
             </div>
           </div>
         </div>
@@ -296,23 +297,32 @@
               <div class="mb-3"> <!--Seleccionar perfil (Bedel, profesor, alumno/a)-->
                 <label for="inputRestablecerPerfil" class="form-label">Seleccione su perfil</label>
                 <select id="inputRestablecerPerfil" class="form-select" aria-label="Default select example">
-                  <option value="1"selected>Alumno</option>
+                  <option value="1" selected>Alumno</option>
                   <option value="2">Profesor</option>
                   <option value="3">Bedel</option>
                 </select>
               </div>
   
+ 
               <div class="mb-3"> <!--Ingresar correo electrónico -->
-                <label for="inputRestablecerEmail" class="form-label">Ingrese su correo electrónico</label>
-                <input type="text" id="inputRestablecerEmail" class="form-control" aria-describedby="passwordHelpBlock">
+                <label for="inputRestablecerEmail" class="form-label">E-mail</label>
+                <input type="text" id="inputRestablecerEmail" class="form-control" placeholder="Ingrese Email" aria-describedby="passwordHelpBlock">
               </div>
 
+              <div class="mb-3"> <!--Ingresar correo electrónico -->
+                <img src="./app/lib/CaptchaSecurityImages.php?width=90&height=30&characters=5" alt="Captcha" id='img_captcha'/>&nbsp;
+                <input class="form-control mr-sm-2" type="text" placeholder="Ingrese Codigo" aria-label="Search" id='inputCaptcha' maxlength="5" required >&nbsp;
+              </div>       
               <!--Aquí iría el Captcha-->
+
+              <div id="msg_restablecer" class="mb-3 d-none"> <!--Ingresar correo electrónico -->
+              </div> 
+
           </div>
 
           <div class="modal-footer"> <!--Pie del modal-->
             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Volver al inicio</button>
-            <button type="button" id="btnRestablecer" class="btn btn-primary">Reestablecer</button>
+            <button type="button" id="btnRestablecer" class="btn btn-primary" >Reestablecer</button>
           </div>
         </div>
       </div>
@@ -587,6 +597,63 @@ $("#mensaje").html(alert);
     
 
 });
+
+
+$('#btnIngresar').click(function(event) {
+      let usuario = $('#inputUsuario').val();
+      let pwd = $('#inputPassword').val();
+      let perfil = $('#inputPerfil').val();
+      let token = $('#inputToken').val();
+
+      let parametros = {'inputUsuario':usuario,'inputPassword':pwd,'inputPerfil':perfil,'token':token}
+      let link = "ajax/autenticar.php";
+
+      $.post(link,parametros,function(response) {
+            console.info(response);
+                if (response.estado==1) {
+                    $(location).attr('href','mod_alumno/home.php');
+                } else if (response.estado==2) {
+                    $(location).attr('href','mod_profesor/home.php');
+                } else if (response.estado==3) {
+                    $(location).attr('href','mod_bedel/home.php');
+                } $("#resultado").html('<div class="alert alert-danger" role="alert"><b>Error:</b>&nbsp;'+response.data+'.</div>');
+      },"json")
+
+});
+
+
+$('#btnRestablecer').click(function(event) {
+      let perfil = $('#inputRestablecerPerfil').val();
+      let email = $('#inputRestablecerEmail').val();
+      let captcha = $('#inputCaptcha').val();
+      let token = $('#inputToken').val();
+
+      let parametros = {'inputPerfil':perfil,'inputEmail':email, "inputCodigo":captcha, 'token':token}
+      let link = "ajax/restablecerPassword.php";
+
+      $.post(link,parametros,function(response) {
+               console.info(response);
+               $("#msg_restablecer").removeClass("d-none");
+               if (response.codigo==200) {
+                    $("#msg_restablecer").html('<div class="alert alert-'+response.class+'" role="alert"><img src="./public/img/icons/ok_icon.png" width="20">&nbsp;'+response.mensaje+'</div>');
+                    $('#inputRestablecerPerfil').prop("disabled",true);
+                    $('#inputRestablecerEmail').prop("disabled",true);
+                    $('#inputCaptcha').prop("disabled",true);
+                    $('#btnRestablecer').prop("disabled",true);
+               } else {
+                    $("#msg_restablecer").html('<div class="alert alert-'+response.class+'" role="alert"><img src="./public/img/icons/error_icon1.png" width="20">&nbsp;'+response.mensaje+'</div>');
+               } 
+      },"json");
+});
+
+$("#modalOlvideContrasenia").on('hide.bs.modal', function(){
+    $("#msg_restablecer").addClass("d-none");
+    $('#inputRestablecerPerfil').val("1");
+    $('#inputRestablecerEmail').val("");
+    $('#inputCaptcha').val("");
+});
+
+
        
 
 </script>
