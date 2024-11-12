@@ -58,12 +58,76 @@ if ($perfil && $email && $codigo) {
                $arr_resultado['mensaje'] = 'Una nueva contrase&ntilde;a ha sido enviada a su correo electronico.';
                $arr_resultado['class'] = 'success';
                $para      = $email;
-               $titulo    = 'Recuperacion de Contrase&ntilde;a';
+               $titulo    = 'Recuperacion de Clave de Ingreso';
+               
+               $imageUrl = "https://escuela40.net/public/img/encabezado_ens40_1.jpeg";
+               $mensaje = "
+                        <html>
+                        <head>
+                          <title>Clave nueva</title>
+                          <style>
+                            .header {
+                              font-size: 24px;
+                              font-weight: bold;
+                              color: #333;
+                              text-align: center;
+                              margin-top: 20px;
+                            }
+                            .code {
+                              font-size: 28px;
+                              font-weight: bold;
+                              color: #4CAF50;
+                              text-align: center;
+                            }
+                            .content {
+                              font-size: 16px;
+                              color: #555;
+                              text-align: center;
+                            }
+                            .container {
+                              width: 100%;
+                              max-width: 600px;
+                              margin: 0 auto;
+                              padding: 20px;
+                              border: 1px solid #ddd;
+                              border-radius: 8px;
+                            }
+                            .image {
+                              width: 100%;
+                              height: auto;
+                            }
+                          </style>
+                        </head>
+                        <body>
+                          <div class='container'>
+                            <img src='$imageUrl' alt='Encabezado' class='image'>
+                            <p class='header'>La clave fue modificada.</p>
+                            <p class='content'>Hola,</p>
+                            <p class='content'>tu nueva clave es:</p>
+                            <p class='code'>$valor</p>
+                            <p class='content'>Introduce este c&oacute;digo en la aplicaci&oacute;n para Ingresar. </p>
+                            <p class='content'>Recuerda volver a cambiar la clave una vez que ingresaste. </p>
+                            <p class='content'>Saludos,<br>Tu equipo de soporte</p>
+                          </div>
+                        </body>
+                        </html>
+                        ";
+               
+               
+               /*
+               
                $mensaje   = "Se ha generado una nueva contrase&ntilde;a: <p style='font-size:40px;'>".$valor."</p></h1></strong>";
                $header = "Content-type: text/html; charset=".$encoding." \r\n";
                $header .= "From: NoResponder@escuela40.net  \r\n";
-               $header .= "MIME-Version: 1.0 \r\n";
-               //mail($para, $titulo, $mensaje, $header);
+               $header .= "MIME-Version: 1.0 \r\n";*/
+               
+               // Encabezados para enviar correo en formato HTML
+                $headers = "MIME-Version: 1.0" . "\r\n";
+                $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+                $headers .= "From: soporte@escuela40.net" . "\r\n";
+
+
+               mail($para, $titulo, $mensaje, $headers);
             } else {
                 $arr_resultado['codigo'] = 501;
                 $arr_resultado['mensaje'] = 'Ocurrio un Error.';
